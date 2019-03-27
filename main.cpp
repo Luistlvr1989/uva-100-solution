@@ -10,7 +10,6 @@ int threeNPlusOne(long);
 
 int main() {
     int start, end;
-
     while ((scanf("%d %d", &start, &end)) == 2) {
         int maxCycle = getMaxCycle(start, end);
         printf("%d %d %d\n", start, end, maxCycle);
@@ -45,5 +44,6 @@ int threeNPlusOne(long number) {
         count++;
         number = (number % 2 == 0) ?  number / 2 : 3 * number + 1;
     }
+
     return count;
 }
